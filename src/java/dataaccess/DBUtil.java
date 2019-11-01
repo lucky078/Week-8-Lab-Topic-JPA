@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class DBUtil 
 {
-    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("NotesPU");
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("NotePU");
 
     public static EntityManagerFactory getEmFactory() 
     {
