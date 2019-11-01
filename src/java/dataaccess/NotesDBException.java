@@ -9,13 +9,13 @@ package dataaccess;
  *
  * @author 749300
  */
-public class NotesBDException extends Exception 
+public class NotesDBException extends Exception 
 {
     /**
      * Creates a new instance of <code>NotesBDException</code> without detail
      * message.
      */
-    public NotesBDException() 
+    public NotesDBException() 
     {
         
     }
@@ -26,7 +26,7 @@ public class NotesBDException extends Exception
      *
      * @param msg the detail message.
      */
-    public NotesBDException(String msg) 
+    public NotesDBException(String msg) 
     {
         super(msg);
     }

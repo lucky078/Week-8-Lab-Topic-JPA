@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>dataaccess.Notes</class>
     <class>models.Notes</class>
+    <class>models.Note</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/NotesDB?zeroDateTimeBehavior=convertToNull"/>

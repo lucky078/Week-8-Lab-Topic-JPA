@@ -25,15 +25,15 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author 749300
  */
 @Entity
-@Table(name = "notes")
+@Table(name = "note")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Notes.findAll", query = "SELECT n FROM Notes n")
-    , @NamedQuery(name = "Notes.findByNoteid", query = "SELECT n FROM Notes n WHERE n.noteid = :noteid")
-    , @NamedQuery(name = "Notes.findByDatecreated", query = "SELECT n FROM Notes n WHERE n.datecreated = :datecreated")
-    , @NamedQuery(name = "Notes.findByTitle", query = "SELECT n FROM Notes n WHERE n.title = :title")
-    , @NamedQuery(name = "Notes.findByContents", query = "SELECT n FROM Notes n WHERE n.contents = :contents")})
-public class Notes implements Serializable {
+    @NamedQuery(name = "Note.findAll", query = "SELECT n FROM Note n")
+    , @NamedQuery(name = "Note.findByNoteid", query = "SELECT n FROM Note n WHERE n.noteid = :noteid")
+    , @NamedQuery(name = "Note.findByDatecreated", query = "SELECT n FROM Note n WHERE n.datecreated = :datecreated")
+    , @NamedQuery(name = "Note.findByTitle", query = "SELECT n FROM Note n WHERE n.title = :title")
+    , @NamedQuery(name = "Note.findByContents", query = "SELECT n FROM Note n WHERE n.contents = :contents")})
+public class Note implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -52,14 +52,14 @@ public class Notes implements Serializable {
     @Column(name = "contents")
     private String contents;
 
-    public Notes() {
+    public Note() {
     }
 
-    public Notes(Integer noteid) {
+    public Note(Integer noteid) {
         this.noteid = noteid;
     }
 
-    public Notes(Integer noteid, Date datecreated, String title, String contents) {
+    public Note(Integer noteid, Date datecreated, String title, String contents) {
         this.noteid = noteid;
         this.datecreated = datecreated;
         this.title = title;
@@ -108,10 +108,10 @@ public class Notes implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Notes)) {
+        if (!(object instanceof Note)) {
             return false;
         }
-        Notes other = (Notes) object;
+        Note other = (Note) object;
         if ((this.noteid == null && other.noteid != null) || (this.noteid != null && !this.noteid.equals(other.noteid))) {
             return false;
         }
@@ -120,7 +120,7 @@ public class Notes implements Serializable {
 
     @Override
     public String toString() {
-        return "models.Notes[ noteid=" + noteid + " ]";
+        return "models.Note[ noteid=" + noteid + " ]";
     }
     
 }
